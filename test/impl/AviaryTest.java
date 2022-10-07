@@ -11,6 +11,10 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Test an aviary with eagle, emu, owl, parrot, duck and moa. Tried to add to more than 5.
+ * Test exceptions
+ */
 public class AviaryTest {
 
     Aviary mAviary;

@@ -7,6 +7,10 @@ import type.FavFoodType;
 
 import static org.junit.Assert.*;
 
+/**
+ * Test an eagle with favorite food of edds and buds.
+ * Test exceptions
+ */
 public class BirdTest {
 
     Bird mBird;

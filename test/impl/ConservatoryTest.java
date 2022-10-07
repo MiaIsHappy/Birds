@@ -9,6 +9,10 @@ import type.FavFoodType;
 
 import static org.junit.Assert.*;
 
+/**
+ * Test conservatory with 6 diff types of birds
+ * Test exceptions
+ */
 public class ConservatoryTest {
 
     Conservatory mConservatory;
