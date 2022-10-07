@@ -9,6 +9,14 @@ import java.util.List;
 
 /**
  * Aviary is used to house birds
+ * Allow you to rescue new birds and bring them into your conservatory
+ * Calculate what food needs to be kept and in what quantities
+ * Assign a bird to an aviary in the conservatory. Assignments must follow the following criteria:
+ * There is a maximum of 20 aviaries in the conservatory
+ * Any bird can be inserted into an empty aviary
+ * No aviary can house more than 5 birds
+ * No extinct birds can be added to an aviary
+ * Flightless birds, birds of prey, and waterfowl should not be mixed with other bird types
  */
 public class Aviary {
     private static final int MAX_NUMBER_OF_BIRDS = 5;
@@ -21,7 +29,10 @@ public class Aviary {
 
     /**
      * Add bird to the aviary
-     *
+     * Any bird can be inserted into an empty aviary
+     * No aviary can house more than 5 birds
+     * No extinct birds can be added to an aviary
+     * Flightless birds, birds of prey, and waterfowl should not be mixed with other bird types
      * @param bird
      * @return add failed return -1, otherwise return the size of birds after add
      */
@@ -86,7 +97,8 @@ public class Aviary {
     }
 
     /**
-     * Print a sign for any given aviary that gives a description of the birds it houses and any interesting information that it may have about that animal.
+     * Print a sign for any given aviary that gives a description of the birds
+     * it houses and any interesting information that it may have about that animal.
      */
     public void printAviarySign() {
         // Birds in this aviary: xx
@@ -111,14 +123,26 @@ public class Aviary {
         }
     }
 
+    /**
+     * Getter for locationId;
+     * @return locationId;
+     */
     public int getLocationId() {
         return locationId;
     }
 
+    /**
+     * Getter for isEmpty
+     * @return isEmpty
+     */
     public boolean isAviaryEmpty() {
         return mBirds.size() == 0;
     }
 
+    /**
+     * Getter for types of birds
+     * @return birds
+     */
     public List<Bird> getHousedBirds() {
         List<Bird> birds = new ArrayList<>(mBirds);
         return birds;
