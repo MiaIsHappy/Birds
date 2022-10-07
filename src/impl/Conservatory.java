@@ -7,7 +7,7 @@ import type.FavFoodType;
 import java.util.*;
 
 /**
- * 
+ * Conservatory that  that represents a conservatory that houses many different types of birds. The conservatory is broken into various aviaries.
  */
 public class Conservatory {
     private static final int MAX_NUMBER_OF_AVIARIES = 20;
@@ -15,6 +15,9 @@ public class Conservatory {
     private Map<Bird, Integer> mBirdLocationMap = new HashMap<>();
     private Map<FavFoodType, Integer> mFoodTypeCountMap = new HashMap<>();
 
+    /**
+     * Default constructor for conservatory
+     */
     public Conservatory() {
         mAviaries = new ArrayList<>(MAX_NUMBER_OF_AVIARIES);
         for (int i = 0; i < MAX_NUMBER_OF_AVIARIES; i++) {
