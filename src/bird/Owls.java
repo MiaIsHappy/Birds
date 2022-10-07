@@ -21,6 +21,10 @@ public class Owls extends Bird {
         super(type, name, isExtinct, numberOfWings, favFood, feature);
     }
 
+    /**
+     * All owls can fly
+     * @return  true
+     */
     @Override
     public boolean canFly() {
         return true;

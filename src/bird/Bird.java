@@ -16,7 +16,7 @@ public abstract class Bird implements BirdInterface {
     private String feature;
 
     /**
-     * Bird constructor with six parameters
+     * Bird constructor with six parameters. Default constructor
      * @param type
      * @param name
      * @param isExtinct
@@ -39,7 +39,7 @@ public abstract class Bird implements BirdInterface {
 
     /**
      * Getter for type
-     * @return
+     * @return typpe
      */
     public BirdsType getType() {
         return type;
@@ -47,7 +47,7 @@ public abstract class Bird implements BirdInterface {
 
     /**
      * Getter for isExtinct
-     * @return
+     * @return isExtinct
      */
     public boolean isExtinct() {
         return isExtinct;
@@ -55,7 +55,7 @@ public abstract class Bird implements BirdInterface {
 
     /**
      * Getter for favFood
-     * @return
+     * @return favFood
      */
     public FavFoodType[] getFavFood() {
         return favFood;
@@ -63,7 +63,7 @@ public abstract class Bird implements BirdInterface {
 
     /**
      * Getter for feature
-     * @return
+     * @return feature
      */
     public String getFeature() {
         return feature;
@@ -71,15 +71,15 @@ public abstract class Bird implements BirdInterface {
 
     /**
      * Getter for name
-     * @return
+     * @return name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * abstract class
-     * @return
+     * abstract class if a bird can fly.
+     * @return boolean
      */
     public abstract boolean canFly();
 

@@ -27,7 +27,7 @@ public class FlightlessBird extends Bird {
 
     /**
      * Flightless bird cannot fly
-     * @return
+     * @return false
      */
     @Override
     public boolean canFly() {

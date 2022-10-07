@@ -27,7 +27,7 @@ public class Parrots extends Bird {
 
     /**
      * Getter for vocabulary
-     * @return
+     * @return vocabulary
      */
     public int getVocabulary() {
         return vocabulary;
@@ -43,7 +43,7 @@ public class Parrots extends Bird {
 
     /**
      * Getter for favoSaying
-     * @return
+     * @return favoSaying
      */
     public String getFavSaying() {
         return favSaying;
@@ -59,7 +59,7 @@ public class Parrots extends Bird {
 
     /**
      * Parrots can always fly
-     * @return
+     * @return fly
      */
     @Override
     public boolean canFly() {

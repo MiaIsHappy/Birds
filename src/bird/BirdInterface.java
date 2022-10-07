@@ -4,7 +4,7 @@ import type.BirdsType;
 import type.FavFoodType;
 
 /**
- * Interface for all bird. Every bird has the same five methods
+ * Interface for all bird. Every bird has the same five methods.
  */
 public interface BirdInterface {
 

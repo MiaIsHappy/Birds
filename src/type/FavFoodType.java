@@ -1,5 +1,8 @@
 package type;
 
+/**
+ * Enum class for all food types
+ */
 public enum FavFoodType {
     BERRIES,
     SEEDS,
