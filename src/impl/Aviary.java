@@ -100,11 +100,12 @@ public class Aviary {
      * Print a sign for any given aviary that gives a description of the birds
      * it houses and any interesting information that it may have about that animal.
      */
-    public void printAviarySign() {
+    public String printAviarySign() {
         // Birds in this aviary: xx
         // xx's feature: xxx
         if (mBirds.size() == 0) {
-            System.out.println("The aviary is empty now");
+            //System.out.println("The aviary is empty now");
+            return "The aviary is empty now";
         } else {
             StringBuilder sb = new StringBuilder("Birds in this aviary: ");
             for (int i = 0; i < mBirds.size(); i++) {
@@ -119,7 +120,8 @@ public class Aviary {
                 sb.append(bird.getName()).append("\'").append("s").append(" feature: ")
                         .append(bird.getFeature()).append("\n");
             }
-            System.out.println(sb.toString());
+            //System.out.println(sb.toString());
+            return sb.toString();
         }
     }
 

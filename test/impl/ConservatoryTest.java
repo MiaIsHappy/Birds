@@ -57,7 +57,12 @@ public class ConservatoryTest {
 
     @Test
     public void testPrintFoodNeeded() {
-        mConservatory.printFoodNeeded();
+        mConservatory.addBird2Aviary(preyBird_eagle);
+        mConservatory.addBird2Aviary(flightlessBirds_emu);
+        mConservatory.addBird2Aviary(owl1);
+        mConservatory.addBird2Aviary(parrot1);
+        String output = mConservatory.printFoodNeeded();
+        assertEquals("{EGGS=4, BUDS=4}", output);
     }
 
     @Test
@@ -73,22 +78,48 @@ public class ConservatoryTest {
         assertEquals(-1, res);
     }
 
-
     @Test
     public void testPrintAllAviariesInfo() {
+        String expected = "All the aviaries by location and the birds they house: \n" +
+                "Aviary 1: eagle1 \n" +
+                "Aviary 2: emu1 \n" +
+                "Aviary 3: owl1 parrot1 \n" +
+                "Aviary 4: empty\n" +
+                "Aviary 5: empty\n" +
+                "Aviary 6: empty\n" +
+                "Aviary 7: empty\n" +
+                "Aviary 8: empty\n" +
+                "Aviary 9: empty\n" +
+                "Aviary 10: empty\n" +
+                "Aviary 11: empty\n" +
+                "Aviary 12: empty\n" +
+                "Aviary 13: empty\n" +
+                "Aviary 14: empty\n" +
+                "Aviary 15: empty\n" +
+                "Aviary 16: empty\n" +
+                "Aviary 17: empty\n" +
+                "Aviary 18: empty\n" +
+                "Aviary 19: empty\n" +
+                "Aviary 20: empty\n";
         mConservatory.addBird2Aviary(preyBird_eagle);
         mConservatory.addBird2Aviary(flightlessBirds_emu);
         mConservatory.addBird2Aviary(owl1);
         mConservatory.addBird2Aviary(parrot1);
-        mConservatory.printAllAviariesInfo();
+        String output = mConservatory.printAllAviariesInfo();
+        assertEquals(expected, output);
     }
 
     @Test
     public void testPrintBirdsInOrder() {
+        String expect = "eagle1 : 1\n" +
+                "emu1 : 2\n" +
+                "owl1 : 3\n" +
+                "parrot1 : 3\n";
         mConservatory.addBird2Aviary(preyBird_eagle);
         mConservatory.addBird2Aviary(flightlessBirds_emu);
         mConservatory.addBird2Aviary(owl1);
         mConservatory.addBird2Aviary(parrot1);
-        mConservatory.printBirdsInOrder();
+        String output = mConservatory.printBirdsInOrder();
+        assertEquals(expect, output);
     }
 }

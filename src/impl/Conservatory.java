@@ -27,9 +27,11 @@ public class Conservatory {
 
     /**
      * Calculate what food needs to be kept and in what quantities
+     * @return food needed
      */
-    public void printFoodNeeded() {
-        System.out.println(mFoodTypeCountMap);
+    public String printFoodNeeded() {
+        //System.out.println(mFoodTypeCountMap);
+        return mFoodTypeCountMap.toString();
     }
 
     /**
@@ -84,9 +86,9 @@ public class Conservatory {
     }*/
 
     /**
-     * Print a “map” that lists all the aviaries by location and the birds they house
+     * Output a “map” that lists all the aviaries by location and the birds they house
      */
-    public void printAllAviariesInfo() {
+    public String printAllAviariesInfo() {
         // AviaryLocationId: xxx
         StringBuilder sb = new StringBuilder("All the aviaries by location and the birds they house: \n");
         for (int i = 0; i < mAviaries.size(); i++) {
@@ -103,13 +105,15 @@ public class Conservatory {
                 sb.append("\n");
             }
         }
-        System.out.println(sb.toString());
+        //System.out.println(sb.toString());
+        return sb.toString();
     }
 
     /**
-     * Print an index that lists all birds in the conservatory in alphabetical order and their location
+     * Output an index that lists all birds in the conservatory in alphabetical order and their location
      */
-    public void printBirdsInOrder() {
+    public String printBirdsInOrder() {
+        StringBuilder sb = new StringBuilder();
         Set<Map.Entry<Bird, Integer>> entries = mBirdLocationMap.entrySet();
         List<Map.Entry<Bird, Integer>> list = new ArrayList<>(entries);
         list.sort(new Comparator<Map.Entry<Bird, Integer>>() {
@@ -120,8 +124,10 @@ public class Conservatory {
         });
 
         for (Map.Entry<Bird, Integer> birdEntry : list) {
-            System.out.println(birdEntry.getKey().getName() + " : " + birdEntry.getValue());
+            sb.append(birdEntry.getKey().getName() + " : " + birdEntry.getValue() + "\n");
+            //System.out.println(birdEntry.getKey().getName() + " : " + birdEntry.getValue());
         }
-
+        //System.out.println(sb.toString());
+        return sb.toString();
     }
 }

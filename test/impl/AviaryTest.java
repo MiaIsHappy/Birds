@@ -113,11 +113,20 @@ public class AviaryTest {
     }
 
     @Test
-    public void testPrintAviarySign() {
-        mAviary.printAviarySign();
+    public void testPrintAviarySign1() {
+        String output = mAviary.printAviarySign();
+        assertEquals("The aviary is empty now", output);
+    }
+
+    @Test
+    public void testPrintAviarySign2() {
         mAviary.addBird(owl1);
         mAviary.addBird(parrot1);
-        mAviary.printAviarySign();
+        String output = mAviary.printAviarySign();
+        String expected = "Birds in this aviary: owl1, parrot1\n" +
+                "owl1's feature: owl1 feature\n" +
+                "parrot1's feature: parrot1 feature\n";
+        assertEquals(expected, output);
     }
 
     @Test
